@@ -40,13 +40,6 @@ const FavoritePage = () => {
         console.log(error);
       }
     })();
-    instance.get('/favorites')
-      .then(response => {
-        const { data } = response
-        setFavorite(data)
-      }).catch(error => {
-        console.log(error);
-      })
     setInputFavorite('');
   }
 
