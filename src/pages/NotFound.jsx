@@ -11,9 +11,10 @@ const NotFound = () => {
   const error = useRouteError();
   const navigate = useNavigate();
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       navigate("/");
     }, 2000);
+    return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
