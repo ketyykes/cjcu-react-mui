@@ -29,7 +29,7 @@ const FavoritePage = () => {
     (async () => {
       try {
         const posetResponse = await instance.post('/favorites', {
-          id: Date.now(),
+          id: String(Date.now()),
           "title": inputFavorite,
           "finished": false
         })
